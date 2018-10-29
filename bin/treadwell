@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const KixxTestNode = require('../');
+
+try {
+	KixxTestNode.runCommandLineInterface();
+} catch (err) {
+	if (err.code === `USER_ERROR`) {
+		console.error(err.message);
+		console.error(`\nExiting.\n`);
+		process.exit(1);
+	}
+	throw err;
+}

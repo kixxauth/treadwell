@@ -1,0 +1,35 @@
+{
+  "name": "treadwell",
+  "version": "1.0.0",
+  "description": "A versitile build system and task runner.",
+  "main": "index.js",
+  "bin": {
+    "treadwell": "./bin/treadwell"
+  },
+  "scripts": {
+    "test": "eslint ./ && kixx-test-node",
+    "lint": "eslint ./"
+  },
+  "devDependencies": {
+    "eslint": "5.8.0",
+    "kixx-assert": "1.0.5",
+    "kixx-test-node": "1.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kixxauth/treadwell.git"
+  },
+  "keywords": [
+    "build",
+    "task",
+    "script"
+  ],
+  "author": "Kris Walker (www.kixx.name)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kixxauth/treadwell/issues"
+  },
+  "homepage": "https://github.com/kixxauth/treadwell#readme",
+  "author": "Kris Walker (kris@kixx.name)",
+  "license": "MIT"
+}
