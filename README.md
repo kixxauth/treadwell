@@ -1,6 +1,11 @@
 Treadwell
 =========
-A versatile cross platform build system and task runner on Node.js.
+A versatile task runner for Node.js. Use it to:
+
+- Create a cross platform build system
+- Script development tasks in an application project (like database seeding)
+- As a replacement for gulp or grunt
+- As a structural framework for a worker process in a Node.js app
 
 Copyright and License
 ---------------------
