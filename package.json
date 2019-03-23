@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/kixxauth/treadwell/issues"
   },
-  "homepage": "https://github.com/kixxauth/treadwell#readme"
+  "homepage": "https://github.com/kixxauth/treadwell#readme",
+  "dependencies": {
+    "eslint": "5.15.3"
+  }
 }
