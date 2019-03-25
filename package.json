@@ -13,7 +13,7 @@
     "treadwell": "./bin/treadwell"
   },
   "scripts": {
-    "test": "eslint ./ && kixx-test-node",
+    "test": "eslint ./ && kixx-test-node --quiet",
     "lint": "eslint ./"
   },
   "repository": {

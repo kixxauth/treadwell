@@ -18,12 +18,15 @@ module.exports = function (test) {
 
 		const taskStartListener = sinon.spy();
 		const taskEndListener = sinon.spy();
+		const logSpy = sinon.spy();
 
 		t.before((done) => {
 			treadwell = TaskRunner.create();
 
 			treadwell.on('task:start', taskStartListener);
 			treadwell.on('task:end', taskEndListener);
+
+			sinon.stub(treadwell.logger, 'log').callsFake(logSpy);
 
 			treadwell.task('foo:noop');
 
@@ -37,12 +40,28 @@ module.exports = function (test) {
 			process.nextTick(done);
 		});
 
-		t.it('fires task:start listener', () => {
+		t.it('fires task:start event', () => {
 			assert.isEqual(1, taskStartListener.callCount);
+			const { args } = taskStartListener.firstCall;
+			assert.isEqual('foo:noop', args[0].key);
 		});
 
-		t.it('fires task:end listener', () => {
+		t.it('fires task:end event', () => {
 			assert.isEqual(1, taskEndListener.callCount);
+			const { args } = taskEndListener.firstCall;
+			assert.isEqual('foo:noop', args[0].key);
+		});
+
+		t.it('logs a message on task start', () => {
+			assert.isGreaterThan(0, logSpy.callCount);
+			const { args } = logSpy.firstCall;
+			assert.isEqual('starting task "foo:noop"', args[0]);
+		});
+
+		t.it('logs a message on task end', () => {
+			assert.isGreaterThan(1, logSpy.callCount);
+			const { args } = logSpy.secondCall;
+			assert.isEqual('task "foo:noop" complete', args[0]);
 		});
 	});
 };
