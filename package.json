@@ -33,6 +33,9 @@
   },
   "homepage": "https://github.com/kixxauth/treadwell#readme",
   "dependencies": {
+    "kixx-logger": "1.0.0"
+  },
+  "devDependencies": {
     "eslint": "5.15.3"
   }
 }

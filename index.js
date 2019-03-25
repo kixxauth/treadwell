@@ -1,26 +1,7 @@
 'use strict';
 
 const TaskRunner = require('./lib/task-runner');
+const { getFullStack } = require('./lib/utils');
 
-
-module.exports = TaskRunner.create();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.TaskRunner = TaskRunner;
+exports.getFullStack = getFullStack;
