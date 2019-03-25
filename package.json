@@ -38,6 +38,7 @@
   "devDependencies": {
     "eslint": "5.15.3",
     "kixx-assert": "1.0.5",
-    "kixx-test-node": "1.4.0"
+    "kixx-test-node": "1.4.0",
+    "sinon": "7.3.0"
   }
 }
