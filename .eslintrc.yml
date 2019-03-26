@@ -39,7 +39,11 @@ rules:
       classes: false
   no-caller:
     - error
+  no-shadow:
+    - error
   no-shadow-restricted-names:
+    - error
+  no-prototype-builtins:
     - error
   for-direction:
     - error
