@@ -36,9 +36,9 @@
     "kixx-logger": "1.0.0"
   },
   "devDependencies": {
-    "eslint": "5.15.3",
+    "eslint": "5.16.0",
     "kixx-assert": "1.0.5",
     "kixx-test-node": "1.4.0",
-    "sinon": "7.3.0"
+    "sinon": "7.3.2"
   }
 }
